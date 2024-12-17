@@ -1,0 +1,23 @@
+package com.football.collector.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "competitions")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Competition {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String name;
+    private String country;
+    private Integer year;
+    private String winner;
+    private String runnerup;
+}
