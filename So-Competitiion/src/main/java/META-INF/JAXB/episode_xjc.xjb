@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
+Voir https://eclipse-ee4j.github.io/jaxb-ri 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2024.12.17 à 02:18:01 AM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://so-competition.com/competitions">
+    <schemaBindings map="false">
+      <package name="com.so_competition.competitions"/>
+    </schemaBindings>
+    <bindings scd="tns:getCompetitionRequest">
+      <class ref="com.so_competition.competitions.GetCompetitionRequest"/>
+    </bindings>
+    <bindings scd="tns:getCompetitionResponse">
+      <class ref="com.so_competition.competitions.GetCompetitionResponse"/>
+    </bindings>
+    <bindings scd="~tns:competition">
+      <class ref="com.so_competition.competitions.Competition"/>
+    </bindings>
+    <bindings scd="tns:getMatchRequest">
+      <class ref="com.so_competition.competitions.GetMatchRequest"/>
+    </bindings>
+    <bindings scd="tns:getMatchResponse">
+      <class ref="com.so_competition.competitions.GetMatchResponse"/>
+    </bindings>
+    <bindings scd="~tns:match">
+      <class ref="com.so_competition.competitions.Match"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://so-competition.com/competitions"
+           xmlns:tns="http://so-competition.com/competitions"
+           elementFormDefault="qualified">
+
+    <!-- Competition Request/Response -->
+    <xs:element name="getCompetitionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCompetitionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="competition" type="tns:competition"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Match Request/Response -->
+    <xs:element name="getMatchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMatchResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="match" type="tns:match"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Data Types -->
+    <xs:complexType name="competition">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="year" type="xs:int"/>
+            <xs:element name="winner" type="xs:string"/>
+            <xs:element name="runnerup" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="match">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="competition" type="xs:string"/>
+            <xs:element name="year" type="xs:int"/>
+            <xs:element name="round" type="xs:string"/>
+            <xs:element name="team1" type="xs:string"/>
+            <xs:element name="team2" type="xs:string"/>
+            <xs:element name="team1goals" type="xs:int"/>
+            <xs:element name="team2goals" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
